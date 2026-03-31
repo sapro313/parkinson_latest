@@ -1,0 +1,196 @@
+/* GLOBAL */
+:root {
+  --bg-main: #0b1220;
+  --bg-card: #111827;
+  --bg-soft: #1f2937;
+
+  --primary: #22c55e;
+  --secondary: #3b82f6;
+  --accent: #06b6d4;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: var(--bg-card);
+  padding: 20px;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.sidebar h2 {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+/* Sidebar items */
+.sidebar p {
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar p:hover {
+  background: var(--bg-soft);
+  transform: translateX(5px);
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+/* CARD */
+.card {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: var(--text-muted);
+}
+
+/* INPUT */
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: var(--bg-soft);
+  color: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Input focus animation */
+input:focus {
+  border: 1px solid var(--accent);
+  transform: scale(1.02);
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Button hover */
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* RESULT */
+.result {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr:hover {
+  background: var(--bg-soft);
+}
+
+/* LOGIN PAGE */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+.login-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.login-card h2 {
+  color: var(--accent);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
